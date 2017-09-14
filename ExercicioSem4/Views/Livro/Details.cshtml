@@ -1,0 +1,66 @@
+﻿@model ExercicioSem4.Models.Livro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lsbn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lsbn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPublicação)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPublicação)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroExemplares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroExemplares)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LivroId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

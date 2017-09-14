@@ -1,0 +1,72 @@
+﻿@model ExercicioSem4.Models.Livro
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lsbn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lsbn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPublicação)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPublicação)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroExemplares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroExemplares)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
